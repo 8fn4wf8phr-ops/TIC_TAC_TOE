@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app">
+    <div class="topbar">
+      <h1>Tic-Tac-Toe</h1>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+    </div>
+
+    <!-- ===== Mode select screen ===== -->
+    <section class="screen" id="modeScreen">
+      <p class="screen-title">Choose a mode</p>
+      <div class="stacked-buttons">
+        <button class="btn-wide" data-mode="2p">Two Players</button>
+        <button class="btn-wide" data-mode="ai">Vs. Computer</button>
+      </div>
+    </section>
+
+    <!-- ===== Symbol select screen (AI mode only) ===== -->
+    <section class="screen" id="symbolScreen" hidden>
+      <p class="screen-title">Play as...</p>
+      <div class="stacked-buttons">
+        <button class="btn-wide" data-symbol="X">X (go first)</button>
+        <button class="btn-wide" data-symbol="O">O (go second)</button>
+      </div>
+      <button class="text-btn back-btn" id="backFromSymbol">&larr; Back</button>
+    </section>
+
+    <!-- ===== Game screen ===== -->
+    <section class="screen" id="gameScreen" hidden>
+      <p class="status" id="statusText">X's turn</p>
+
+      <div class="board" id="board">
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+      </div>
+
+      <div class="game-actions">
+        <button class="btn-secondary" id="restartBtn">Restart</button>
+        <button class="btn-secondary" id="changeModeBtn">Change Mode</button>
+      </div>
+
+      <div class="scoreboard" id="scoreboard"></div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
